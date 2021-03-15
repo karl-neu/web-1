@@ -1,0 +1,50 @@
+<!--<div class="form-inline">
+<label id="name">Dog name: </label>
+<input for="name" [(ngModel)]="dog.name" />
+
+<label id="age">Dog age: </label>
+<input for="age" [(ngModel)]="dog.age" />-->
+
+<!-- (click) passes input value to add() and then clears the input -->
+<!--<button class="add-button" (click)="add(dog); dogName.value=''">
+  Add dog
+</button>
+</div>-->
+
+
+<div class="form-inline">
+  <div class="form-group">
+    <div class="col-md-8">
+      <input class="form-control" [(ngModel)]="name" placeholder="Name" />
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-6">
+      <input type="number" class="form-control" [(ngModel)]="age" placeholder="Age" />
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-8">
+      <button class="btn btn-default" (click)="add(name, age)">Add Dog</button>
+    </div>
+  </div>
+</div>
+
+<p *ngIf="!dogs"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="dogs">
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let dog of dogs">
+      <td>{{ dog.id }}</td>
+      <td>{{ dog.name }}</td>
+      <td>{{ dog.age }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CatComponent } from './cat/cat.component';
+import { DogComponent } from './dog/dog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CatComponent } from './cat/cat.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CatComponent
+    CatComponent,
+    DogComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,7 +32,9 @@ import { CatComponent } from './cat/cat.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'cat', component: CatComponent },
-    ])
+      { path: 'dog', component: DogComponent },
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

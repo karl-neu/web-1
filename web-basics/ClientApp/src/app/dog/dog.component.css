@@ -1,0 +1,11 @@
+.add-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+input {
+  display: block;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}

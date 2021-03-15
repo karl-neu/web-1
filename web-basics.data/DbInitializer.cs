@@ -9,9 +9,10 @@ namespace web_basics.data
     {
         public static void Initialize(WebBasicsDBContext context)
         {
+            //context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
 
-            if (context.Cats.Any())
+            if (context.Cats.Any() && context.Dogs.Any())
             {
                 return;
             }
@@ -21,6 +22,13 @@ namespace web_basics.data
                 new Entities.Cat() { Name = "Kozkii", Age = 4 },
                 new Entities.Cat() { Name = "Murka", Age = 13 },
                 new Entities.Cat() { Name = "Bony", Age = 2 }
+            });
+
+            context.Dogs.AddRange(new Entities.Dog[] {
+                new Entities.Dog() { Name = "Barbos", Age = 3 },
+                new Entities.Dog() { Name = "Rex", Age = 4 },
+                new Entities.Dog() { Name = "Bingo", Age = 13 },
+                new Entities.Dog() { Name = "Bard", Age = 2 }
             });
 
             context.SaveChanges();
