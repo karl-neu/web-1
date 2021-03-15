@@ -12,6 +12,10 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CatComponent } from './cat/cat.component';
 import { DogComponent } from './dog/dog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatExpansionModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },

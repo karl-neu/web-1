@@ -21,7 +21,7 @@ export class DogComponent implements OnInit {
 
   add(name: string, age: number): void {
 
-    if (name == null || name.trim() == "" || age == null)
+    if (name == null || name.trim() == "" || age == null || age < 1 || age > 30)
       return;
 
     this.dogService.addDog2(new Dog(name, age))
